@@ -6,13 +6,16 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    padding: 10px;
+`;
 
 export default function HomePage() {
-  return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
-  );
+    return (
+        <Wrapper>
+            <h1>Test</h1>
+        </Wrapper>
+    );
 }
