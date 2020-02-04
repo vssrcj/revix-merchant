@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuDropDown /> Should render and match the snapshot 1`] = `
+<div>
+  <button
+    class="ant-btn ant-dropdown-trigger"
+    type="button"
+  >
+    <span>
+      Products
+    </span>
+  </button>
+  <button
+    class="ant-btn ant-dropdown-trigger"
+    type="button"
+  >
+    <span>
+      Company
+    </span>
+  </button>
+  <button
+    class="ant-btn ant-dropdown-trigger"
+    type="button"
+  >
+    <span>
+      Support
+    </span>
+  </button>
+  <button
+    class="ant-btn ant-dropdown-trigger"
+    type="button"
+  >
+    <span>
+      ZAR
+    </span>
+  </button>
+</div>
+`;
