@@ -30,6 +30,12 @@ const SecondPage = (props) => {
       <img src={imageUrl} alt="header" />
       {/* <Img fluid={imageUrl} /> */}
       <Link to="/">Go back to the homepage</Link>
+      <div style={{
+        height: '800px',
+        background: 'red',
+        width: '20px',
+      }}
+      />
     </Layout>
   );
 };

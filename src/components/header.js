@@ -58,7 +58,7 @@ const Dash = styled.div`
 `;
 
 const Header = () => (
-  <StyledHeader>
+  <StyledHeader style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
     <Logo />
     <Menu
       theme="dark"
