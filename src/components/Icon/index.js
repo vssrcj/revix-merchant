@@ -23,12 +23,12 @@ function Icon(props) {
 }
 
 Icon.propTypes = {
-  type: PropTypes.string,
+  rotate: PropTypes.number,
+  spin: PropTypes.bool,
   style: PropTypes.shape({}),
   theme: PropTypes.string,
-  spin: PropTypes.bool,
-  rotate: PropTypes.number,
   twoToneColor: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default Icon;

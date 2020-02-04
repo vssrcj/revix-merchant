@@ -30,6 +30,9 @@ function List(props) {
 
 List.propTypes = {
   bordered: PropTypes.bool,
+  // eslint-disable-next-line react/forbid-prop-types
+  dataSource: PropTypes.any,
+  extra: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   // footer: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   grid: PropTypes.shape({}),
   // header: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
@@ -38,11 +41,8 @@ List.propTypes = {
   loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
   loadMore: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   pagination: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
-  // eslint-disable-next-line react/forbid-prop-types
-  dataSource: PropTypes.any,
   // renderItem: PropTypes.node,
   // position: PropTypes.string,
-  extra: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 export default List;

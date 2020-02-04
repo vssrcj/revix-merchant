@@ -68,18 +68,18 @@ function Typography(props) {
 
 Typography.propTypes = {
   code: PropTypes.bool,
-  title: PropTypes.bool,
-  level: PropTypes.number,
-  displayText: PropTypes.string,
-  paragraph: PropTypes.bool,
   copyable: PropTypes.bool,
   delete: PropTypes.bool,
   disabled: PropTypes.bool,
+  displayText: PropTypes.string,
   ellipsis: PropTypes.bool,
+  level: PropTypes.number,
   mark: PropTypes.bool,
-  underline: PropTypes.bool,
+  paragraph: PropTypes.bool,
   strong: PropTypes.bool,
+  title: PropTypes.bool,
   type: PropTypes.string,
+  underline: PropTypes.bool,
 };
 
 export default Typography;

@@ -19,6 +19,7 @@
       }
     ],
     "react/destructuring-assignment": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/sort-prop-types": "warn"
   }
 }

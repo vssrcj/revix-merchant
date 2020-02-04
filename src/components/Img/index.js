@@ -13,9 +13,9 @@ function Img(props) {
 }
 
 Img.propTypes = {
-  src: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
+  src: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
 };
 
 export default Img;

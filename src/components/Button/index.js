@@ -31,19 +31,19 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  title: PropTypes.string,
+  block: PropTypes.bool,
   disabled: PropTypes.bool,
   ghost: PropTypes.bool,
   href: PropTypes.string,
   htmlType: PropTypes.string,
   icon: PropTypes.string,
   loading: PropTypes.bool,
+  onClick: PropTypes.func,
   shape: PropTypes.string,
   size: PropTypes.string,
   target: PropTypes.string,
+  title: PropTypes.string,
   type: PropTypes.string,
-  onClick: PropTypes.func,
-  block: PropTypes.bool,
 };
 
 export default Button;
