@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "quotes": [
+      1,
+      "single"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js"
+        ]
+      }
+    ],
+    "react/destructuring-assignment": "off"
+  }
+}
