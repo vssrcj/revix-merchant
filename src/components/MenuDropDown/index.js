@@ -4,103 +4,53 @@
  *
  */
 
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'gatsby';
 import {
-  Menu, Dropdown, Button,
+  Dropdown, Button, Row, Col,
 } from 'antd';
+import menuItems from './menu-items';
+import {
+  MenuContent, ColName, ColContent, RowName, RowDescription, RowContent,
+} from './styles';
 
-// const { SubMenu } = Menu;
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 
 function MenuDropDown() {
-  const [current, setCurrent] = useState('');
-
-  const handleClick = (e) => {
-    console.log('click', e);
-
-    setCurrent(e.key);
-  };
-
-  // const routeToHome = useCallback(() => {
-  //   props.history.push('/');
-  // }, [props.history]);
-
-  // const routeToProfile = useCallback(() => {
-  //   props.history.push('/profile');
-  // }, [props.history]);
-
-  const productMenu = (
-    <Menu
-      onClick={handleClick}
-      selectedKeys={[current]}
-      style={{
-        flexDirection: 'row', display: 'flex', justifyContent: 'space-evenly', width: '200px',
-      }}
+  return menuItems.map((menuItem) => (
+    <Dropdown
+      key={menuItem.name}
+      overlay={(
+        <MenuContent>
+          <Row>
+            {menuItem.columns.map((column, ci) => (
+              <Col key={ci} md={8}>
+                <ColContent>
+                  {column.name && <ColName>{column.name}</ColName>}
+                  <ul>
+                    {column.rows.map((row, ri) => (
+                      <li key={ri}>
+                        <Link to="/page-2/">
+                          <img src={row.icon} alt="icon" />
+                          <RowContent>
+                            <RowName>{row.name}</RowName>
+                            <RowDescription>{row.description}</RowDescription>
+                          </RowContent>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </ColContent>
+              </Col>
+            ))}
+          </Row>
+        </MenuContent>
+      )}
+      trigger={['click']}
+      placement="bottomCenter"
     >
-      <Menu.Item key="products:1">Option 1</Menu.Item>
-      <Menu.Item key="products:2">Option 2</Menu.Item>
-    </Menu>
-  );
-
-  const menu2 = (
-    <Menu onClick={handleClick} selectedKeys={[current]}>
-      <Menu.Item key="company:1">Option 1</Menu.Item>
-      <Menu.Item key="company:2">Option 2</Menu.Item>
-    </Menu>
-  );
-
-  const menu3 = (
-    <Menu onClick={handleClick} selectedKeys={[current]}>
-      <Menu.Item key="support:1">Option 1</Menu.Item>
-      <Menu.Item key="support:2">Option 2</Menu.Item>
-      <Menu.Item key="support:3">Option 3</Menu.Item>
-    </Menu>
-  );
-
-  const menu4 = (
-    <Menu onClick={handleClick} selectedKeys={[current]}>
-      <Menu.Item key="support:1">Option 1</Menu.Item>
-      <Menu.Item key="support:2">Option 2</Menu.Item>
-      <Menu.Item key="support:3">Option 3</Menu.Item>
-    </Menu>
-  );
-
-  return (
-    <div>
-      <Dropdown
-        overlay={productMenu}
-        trigger={['click']}
-        placement="bottomCenter"
-      >
-        <Button>Products</Button>
-      </Dropdown>
-
-      <Dropdown
-        overlay={menu2}
-        trigger={['click']}
-        placement="bottomCenter"
-      >
-        <Button>Company</Button>
-      </Dropdown>
-
-      <Dropdown
-        overlay={menu3}
-        trigger={['click']}
-        placement="bottomCenter"
-      >
-        <Button>Support</Button>
-      </Dropdown>
-
-      <Dropdown
-        overlay={menu4}
-        trigger={['click']}
-        placement="bottomCenter"
-      >
-        <Button>ZAR</Button>
-      </Dropdown>
-    </div>
-  );
+      <Button>{menuItem.name}</Button>
+    </Dropdown>
+  ));
 }
 
 MenuDropDown.propTypes = {};
