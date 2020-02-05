@@ -20,6 +20,8 @@
     ],
     "react/destructuring-assignment": "off",
     "react/require-default-props": "off",
-    "react/sort-prop-types": "warn"
+    "react/sort-prop-types": "warn",
+    "import/prefer-default-export": "off",
+    "react/no-array-index-key": "off"
   }
 }
