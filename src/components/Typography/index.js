@@ -25,7 +25,7 @@ function Typography(props) {
         underline={props.underline}
         type={props.type}
       >
-        {props.displayText}
+        {props.children}
       </Title>
     );
   }
@@ -43,7 +43,7 @@ function Typography(props) {
         strong={props.strong}
         type={props.type}
       >
-        {props.displayText}
+        {props.children}
       </Paragraph>
     );
   }
@@ -61,17 +61,17 @@ function Typography(props) {
       strong={props.strong}
       type={props.type}
     >
-      {props.displayText}
+      {props.children}
     </Text>
   );
 }
 
 Typography.propTypes = {
+  children: PropTypes.node,
   code: PropTypes.bool,
   copyable: PropTypes.bool,
   delete: PropTypes.bool,
   disabled: PropTypes.bool,
-  displayText: PropTypes.string,
   ellipsis: PropTypes.bool,
   level: PropTypes.number,
   mark: PropTypes.bool,

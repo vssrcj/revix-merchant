@@ -25,13 +25,14 @@ function Button(props) {
       onClick={props.onClick}
       block={props.block}
     >
-      {props.title}
+      {props.children}
     </AntButton>
   );
 }
 
 Button.propTypes = {
   block: PropTypes.bool,
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   ghost: PropTypes.bool,
   href: PropTypes.string,
@@ -42,7 +43,6 @@ Button.propTypes = {
   shape: PropTypes.string,
   size: PropTypes.string,
   target: PropTypes.string,
-  title: PropTypes.string,
   type: PropTypes.string,
 };
 
